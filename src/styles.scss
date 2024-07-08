@@ -1,1 +1,30 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+    margin: 0;
+    background: linear-gradient(45deg, #1f2436, #241e33) fixed;
+
+    color: white;
+}
+
+@keyframes linkShine {
+    0% {
+        color: #F2527D;
+    }
+    33% {
+        color: #D936A0;
+    }
+    67% {
+        color: #F249D6;
+    }
+    100% {
+        color: #F2527D;
+    }
+}
+a {
+    color: #18D9D9;
+    transition: color ease 100ms;
+    &:hover {
+        color: #F2527D;
+        transition: color ease 100ms;
+        animation: linkShine 5s linear forwards infinite;
+    }
+}

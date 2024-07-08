@@ -1,0 +1,20 @@
+<div class="left-side">
+    <h1>{{ name }}</h1>
+    <h2>{{ position }}</h2>
+    <p>{{ catchPhrase }}</p>
+
+    <ul>
+        <li><a routerLink="/">About</a></li>
+        <li><a routerLink="/experience">Experience</a></li>
+        <li><a routerLink="/projects">Projects</a></li>
+    </ul>
+
+    <ul class="social-links">
+        <li *ngFor="let social of socials">
+            <a href="{{ social.link }}">
+                <fa-icon [icon]="social.icon"></fa-icon>
+            </a>
+        </li>
+    </ul>
+</div>
+  

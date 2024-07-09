@@ -1,6 +1,55 @@
-.application {
+main {
+    padding: 90px 120px;
+    box-sizing: content-box;
+
+    &::before {
+        content: '';
+        position: fixed;
+        inset: 0px;
+        z-index: -1;
+        pointer-events: none;
+        background-image: linear-gradient(var(--grid-color) 1px, transparent 1px),
+            linear-gradient(to right, var(--grid-color) 1px, transparent 1px);
+        background-position: round(50%, 1px) 0%;
+        image-rendering: pixelated;
+        background-size: 96px 92px;
+        transition: background-image ease 200ms;
+        background-blend-mode: color;
+        box-shadow: inset var(--darkvador) 0 0 40px 0;
+    }
+    &::after {
+        content: '';
+        position: fixed;
+        inset: 0px;
+        z-index: -1;
+        pointer-events: none;
+        background-image: radial-gradient(at 60% 40%, var(--teal) 0px, transparent 60%),
+            radial-gradient(at 90% 15%, var(--purple) 0px, transparent 50%),
+            radial-gradient(at 55% 95%, var(--lblue) 0px, transparent 50%),
+            radial-gradient(at 20% 30%, var(--dblue) 0px, transparent 50%),
+            radial-gradient(circle at 90% 70%, var(--pink) 0px, var(--darkvador) 30%);
+        opacity: 0.05;
+        filter: blur(40px) hue-rotate(0deg);
+    }
+
     @media screen and (min-width: 1024px) {
         display: grid;
         grid-template-columns: 1fr 1fr;
+        gap: 40px;
+        max-width: 1024px;
+        margin: 0 auto;
+
+        @keyframes ttls {
+            from {
+                filter: blur(40px) hue-rotate(-45deg);
+            }
+            to {
+                filter: blur(40px) hue-rotate(45deg);
+            }
+        }
+
+        &::after {
+            animation: ttls 6s linear alternate infinite;
+        }
     }
 }

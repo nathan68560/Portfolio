@@ -10,6 +10,4 @@ import { RightSideComponent } from './right-side/right-side.component';
     styleUrl: './app.component.scss',
     imports: [RouterOutlet, LeftSideComponent, RightSideComponent]
 })
-export class AppComponent {
-  title = 'Portfolio';
-}
+export class AppComponent {}

@@ -12,8 +12,8 @@ import {faGithub, faLinkedin} from '@fortawesome/free-brands-svg-icons';
 })
 export class LeftSideComponent {
   name = "Nathan Wersinger";
-  position = "Fullstack Engineer";
-  catchPhrase = "Believer in the indomitable human spirit";
+  position = "Fullstack Developer";
+  catchPhrase = "Believer in the Indomitable Human Spirit.";
   socials = [
     {
       link: "https://github.com/nathan68560",

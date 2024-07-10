@@ -1,0 +1,10 @@
+<article>
+    <p class="period">{{ experience.startDate }}&nbsp;&mdash;&nbsp;{{ experience.endDate }}</p>
+    <div>
+        <h3>{{ experience.position }}&nbsp;&CenterDot;&nbsp;{{ experience.company }}</h3>
+        <p *ngIf="experience.description">{{ experience.description }}</p>
+        <ul>
+            <li *ngFor="let tag of experience.tags">{{ tag }}</li>
+        </ul>
+    </div>
+</article>

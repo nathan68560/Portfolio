@@ -1,0 +1,91 @@
+article {
+    display: grid;
+    grid-template-columns: 130px 1fr;
+    gap: 20px;
+    position: relative;
+    margin: 16px -20px 36px;
+    padding: 14px 20px;
+
+    @keyframes IWannaDance {
+        0% {
+            box-shadow: -1px -1px 2px -1px var(--purple),
+                1px 1px 2px -1px var(--pink);
+        }
+        20% {
+            box-shadow: -1px -1px 2px -1px var(--pink),
+                1px 1px 2px -1px var(--purple);
+        }
+        40% {
+            box-shadow: -1px -1px 2px -1px var(--dblue),
+                1px 1px 2px -1px var(--teal);
+        }
+        60% {
+            box-shadow: -1px -1px 2px -1px var(--teal),
+                1px 1px 2px -1px var(--dblue);
+        }
+        80% {
+            box-shadow: -1px -1px 2px -1px var(--pink),
+                1px 1px 2px -1px var(--purple);
+        }
+        100% {
+            box-shadow: -1px -1px 2px -1px var(--purple),
+                1px 1px 2px -1px var(--pink);
+        }
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        inset: 0px;
+        z-index: -1;
+        opacity: 0;
+        background-color: var(--grid-color);
+        border-radius: 10px;
+        backdrop-filter: blur(4px);
+        box-shadow: -1px -1px 2px -1px var(--purple),
+            1px 1px 2px -1px var(--pink);
+        transition: opacity ease-in 200ms;
+        animation: IWannaDance 10s linear infinite forwards;
+    }
+
+    &:hover::before { opacity: 1; }
+
+    .period {
+        color: var(--washed-white);
+        font-size: 12px;
+        font-weight: 400;
+        text-transform: uppercase;
+        margin: 0px;
+        line-height: 22px;
+    }
+    
+    h3 {
+        margin: 0px;
+        color: var(--walter-white);
+        font-size: 16px;
+        font-weight: 500;
+        letter-spacing: 0.25px;
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 10px;
+    
+        li {
+            background-color: var(--lblue);
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 12px;
+            color: var(--darkvador);
+            font-weight: 700;
+            cursor: default;
+        }
+    }
+}

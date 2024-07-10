@@ -1,14 +1,17 @@
-<section id="about">
+<section>
+    <div class="anchor" id="about"></div>
     <h2>About</h2>
-    <p *ngFor="let i of counter(3)">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit, voluptatem quisquam quibusdam molestiae quaerat perferendis in nostrum cupiditate doloremque et odio veritatis modi similique omnis qui aliquam deleniti fugiat tenetur!</p>
+    <p *ngFor="let i of counter(5)">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit, voluptatem quisquam quibusdam molestiae quaerat perferendis in nostrum cupiditate doloremque et odio veritatis modi similique omnis qui aliquam deleniti fugiat tenetur!</p>
 </section>
 
-<section id="experience">
+<section>
+    <div class="anchor" id="experience"></div>
     <h2>Experience</h2>
-    <p *ngFor="let i of counter(3)">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit, voluptatem quisquam quibusdam molestiae quaerat perferendis in nostrum cupiditate doloremque et odio veritatis modi similique omnis qui aliquam deleniti fugiat tenetur!</p>
+    <experience *ngFor="let exp of experiences" [model]="exp"></experience>
 </section>
 
-<section id="projects">
+<section>
+    <div class="anchor" id="projects"></div>
     <h2>Projects</h2>
-    <p *ngFor="let i of counter(3)">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit, voluptatem quisquam quibusdam molestiae quaerat perferendis in nostrum cupiditate doloremque et odio veritatis modi similique omnis qui aliquam deleniti fugiat tenetur!</p>
+    <p *ngFor="let i of counter(5)">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit, voluptatem quisquam quibusdam molestiae quaerat perferendis in nostrum cupiditate doloremque et odio veritatis modi similique omnis qui aliquam deleniti fugiat tenetur!</p>
 </section>

@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { CommonModule } from '@angular/common';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import {faGithub, faLinkedin} from '@fortawesome/free-brands-svg-icons';
 
 @Component({
   selector: 'left-side',
   standalone: true,
-  imports: [FontAwesomeModule, CommonModule],
+  imports: [CommonModule, FontAwesomeModule],
   templateUrl: './left-side.component.html',
   styleUrl: './left-side.component.scss'
 })

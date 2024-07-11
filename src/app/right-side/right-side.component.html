@@ -1,7 +1,7 @@
 <section>
     <div class="anchor" id="about"></div>
     <h2>About</h2>
-    <p *ngFor="let i of counter(5)">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit, voluptatem quisquam quibusdam molestiae quaerat perferendis in nostrum cupiditate doloremque et odio veritatis modi similique omnis qui aliquam deleniti fugiat tenetur!</p>
+    <p *ngFor="let paragraph of about">{{ paragraph }}</p>
 </section>
 
 <section>
@@ -13,5 +13,5 @@
 <section>
     <div class="anchor" id="projects"></div>
     <h2>Projects</h2>
-    <p *ngFor="let i of counter(5)">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit, voluptatem quisquam quibusdam molestiae quaerat perferendis in nostrum cupiditate doloremque et odio veritatis modi similique omnis qui aliquam deleniti fugiat tenetur!</p>
+    <project *ngFor="let proj of projects" [model]="proj"></project>
 </section>

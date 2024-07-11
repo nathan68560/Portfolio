@@ -3,8 +3,8 @@ article {
     grid-template-columns: 130px 1fr;
     gap: 20px;
     position: relative;
-    margin: 16px -20px 36px;
-    padding: 14px 20px;
+    margin: 14px -20px 34px;
+    padding: 16px 20px;
     cursor: default;
 
     @keyframes IWannaDance {
@@ -57,7 +57,7 @@ article {
         font-weight: 400;
         text-transform: uppercase;
         margin: 0px;
-        line-height: 22px;
+        line-height: 14px;
     }
     
     h3 {
@@ -65,7 +65,14 @@ article {
         color: var(--walter-white);
         font-size: 16px;
         font-weight: 500;
+        line-height: 12px;
         letter-spacing: 0.25px;
+    }
+
+    div>p {
+        white-space: break-spaces;
+        font-size: 14px;
+        line-height: 1.25em;
     }
 
     ul {

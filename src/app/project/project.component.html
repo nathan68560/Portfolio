@@ -1,5 +1,5 @@
 <article [title]="project.name" (click)="onClick()">
-    <img [src]="project.thumbnailSrc">
+    <img *ngIf="project.thumbnailSrc" [src]="project.thumbnailSrc" alt="Thumbnail for {{project.name}}">
     <div>
         <h3>{{ project.name }}</h3>
         <p>{{ project.excerpt }}</p>

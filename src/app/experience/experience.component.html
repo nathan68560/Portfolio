@@ -3,7 +3,7 @@
     <div>
         <h3>{{ experience.position }}&nbsp;&CenterDot;&nbsp;{{ experience.company }}</h3>
         <p *ngIf="experience.description">{{ experience.description }}</p>
-        <ul>
+        <ul *ngIf="experience.tags.length > 0">
             <li *ngFor="let tag of experience.tags">{{ tag }}</li>
         </ul>
     </div>

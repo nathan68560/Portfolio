@@ -1,0 +1,10 @@
+<article [title]="project.name" (click)="onClick()">
+    <img [src]="project.thumbnailSrc">
+    <div>
+        <h3>{{ project.name }}</h3>
+        <p>{{ project.excerpt }}</p>
+        <ul *ngIf="project.tags.length > 0">
+            <li *ngFor="let tag of project.tags">{{ tag }}</li>
+        </ul>
+    </div>
+</article>

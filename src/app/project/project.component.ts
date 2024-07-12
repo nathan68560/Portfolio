@@ -11,8 +11,4 @@ import { ProjectModel } from './project.model';
 })
 export class ProjectComponent {
   @Input({ required: true, alias: "model" }) project!: ProjectModel;
-
-  onClick() {
-    console.log("click");
-  }
 }

@@ -1,4 +1,4 @@
-section {
+.main-section {
     position: relative;
     margin-top: 100px;
 
@@ -18,6 +18,125 @@ section {
     @media screen and (min-width: 1024px) {
         &:first-of-type {
             margin-top: 22px;
+        }
+    }
+}
+
+aside {
+    position: fixed;
+    inset: 0px;
+    background-color: transparent;
+    pointer-events: none;
+    transition: background-color ease-in 200ms;
+    z-index: 5;
+    
+    &.active {
+        pointer-events: all;
+        background-color: rgb(0, 0, 0, 0.5);
+
+        div {
+            transform: translateX(0px);
+        }
+    }
+
+    div {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        padding: 30px 40px;
+        width: min(600px, 80vw);
+        background: var(--darkvador);
+        transform: translateX(100%);
+        transition: transform 200ms ease-in;
+
+        button {
+            all: unset;
+            font-size: 24px;
+            cursor: pointer;
+            transition: color 200ms ease-in;
+            display: flex;
+            align-items: center;
+
+            &:hover {
+                color: var(--walter-white);
+
+                span {
+                    text-indent: 10px;
+                }
+            }
+
+            span {
+                font-size: 14px;
+                text-indent: -100%;
+                overflow: hidden;
+                transition: text-indent 200ms ease-in;
+            }
+        }
+
+        h3 {
+            font-size: 26px;
+            line-height: 20px;
+            color: var(--walter-white);
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 14px;
+            line-height: 20px;
+            margin: 0 0 10px;
+        }
+
+        img {
+            width: 100%;
+            aspect-ratio: 3/2;
+            object-fit: cover;
+            object-position: center;
+            border-radius: 12px;
+        }
+
+        .proj-section:not(:first-of-type) {
+            margin-top: 40px;
+
+            h4 {
+                font-size: 20px;
+                font-weight: 500;
+                color: var(--mid-white);
+                margin: 10px 0;
+            }
+
+            ul {
+                display: flex;
+                justify-content: flex-start;
+                align-items: baseline;
+                flex-wrap: wrap;
+                gap: 10px;
+                list-style: none;
+                padding: 0px;
+                margin: 0px;
+
+                li {
+                    color: var(--darkvador);
+                    padding: 5px 10px;
+                    border-radius: 20px;
+                    font-size: 12px;
+                    font-weight: 700;
+                    background-color: var(--washed-white);
+                }
+            }
+
+            a {
+                text-decoration: none;
+                color: var(--lblue);
+                font-size: 12px;
+                font-weight: 500;
+                letter-spacing: -0.025em;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
         }
     }
 }

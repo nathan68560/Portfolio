@@ -1,3 +1,5 @@
+import { IconDefinition } from "@fortawesome/free-brands-svg-icons";
+
 export class ProjectModel {
     name: string;
     thumbnailSrc: string;
@@ -7,6 +9,7 @@ export class ProjectModel {
     description: string | null;
     tags: Array<string>;
     links: Array<{
+        icon: IconDefinition,
         title: string,
         url: string
     }>;
@@ -30,6 +33,7 @@ export class ProjectModel {
         description: string | null = null,
         tags: Array<string> | null = null,
         links: Array<{
+            icon: IconDefinition,
             title: string,
             url: string
         }> | null = null,

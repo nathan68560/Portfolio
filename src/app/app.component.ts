@@ -17,7 +17,7 @@ export class AppComponent {
     onScroll() { this.updateActiveLink(); }
 
     updateActiveLink() {
-        const sections = this.elementRef.nativeElement.querySelectorAll('section');
+        const sections = this.elementRef.nativeElement.querySelectorAll('.main-section');
 
         for(let i=0; i<sections.length; i++) {
             const section = sections[i];

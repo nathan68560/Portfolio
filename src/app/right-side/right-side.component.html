@@ -1,17 +1,45 @@
-<section>
+<section class="main-section">
     <div class="anchor" id="about"></div>
     <h2>About</h2>
     <p *ngFor="let paragraph of about">{{ paragraph }}</p>
 </section>
 
-<section>
+<section class="main-section">
     <div class="anchor" id="experience"></div>
     <h2>Experience</h2>
     <experience *ngFor="let exp of experiences" [model]="exp"></experience>
 </section>
 
-<section>
+<section class="main-section">
     <div class="anchor" id="projects"></div>
     <h2>Projects</h2>
-    <project *ngFor="let proj of projects" [model]="proj"></project>
+    <project *ngFor="let proj of projects" [model]="proj" (click)="setCurrProject(proj)"></project>
 </section>
+
+<aside [ngClass]="{'active': currProject != null}" (click)="setCurrProject(null)">
+    <div (click)="$event.stopPropagation()">
+        <button (click)="setCurrProject(null)" title="Close sidebar">
+            <fa-icon [icon]="xicon"></fa-icon>
+            <span>Close sidebar</span>
+        </button>
+        <section class="proj-section">
+            <h3>{{ currProject?.name }}</h3>
+            <p>{{ currProject?.excerpt }}</p>
+            <img *ngIf="currProject?.thumbnailSrc" [src]="currProject?.thumbnailSrc" alt="Thumbnail for {{currProject?.name}}">
+        </section>
+        <section class="proj-section" *ngIf="currProject?.description">
+            <h4>About</h4>
+            <p>{{ currProject?.description }}</p>
+        </section>
+        <section class="proj-section" *ngIf="currProject?.tags?.length">
+            <h4>Tags</h4>
+            <ul>
+                <li *ngFor="let tag of currProject?.tags">{{ tag }}</li>
+            </ul>
+        </section>
+        <section class="proj-section" *ngFor="let link of currProject?.links">
+            <h4><fa-icon [icon]="link.icon"></fa-icon> {{ link.title }}</h4>
+            <a [href]="link.url" title="Open {{currProject?.name}}'s {{link.title}} link in a new tab" target="_blank" referrerpolicy="noreferrer">{{ link.url }}</a>
+        </section>
+    </div>
+</aside>

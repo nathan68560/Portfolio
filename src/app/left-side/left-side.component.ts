@@ -13,7 +13,7 @@ import {faGithub, faLinkedin} from '@fortawesome/free-brands-svg-icons';
 export class LeftSideComponent {
   name = "Nathan Wersinger";
   position = "Fullstack Developer";
-  catchPhrase = "Believer in the Indomitable Human Spirit.";
+  catchPhrase = "I'm passionate about building innovative applications and constantly seek for new competences to acquire.";
   socials = [
     {
       link: "https://github.com/nathan68560",

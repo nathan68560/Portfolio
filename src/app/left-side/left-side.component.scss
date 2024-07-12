@@ -92,6 +92,7 @@ header {
     @media screen and (min-width: 1024px) {
         position: fixed;
         height: round(70%, 92px);
+        width: min(500px, 35%);
 
         #nav-links {
             display: flex;

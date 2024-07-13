@@ -30,7 +30,7 @@ export class RightSideComponent {
       "Portfolio",
       "assets/portfolio.jpg",
       "2024.07",
-      "A website to showcase my personnal projects!",
+      "A website to showcase my personal projects!",
       "Portfolio is my portfolio website where I showcase the different projects I have worked on over the years.",
       ["Angular", "TypeScript", "SCSS", "GitHub"],
       [
@@ -43,7 +43,7 @@ export class RightSideComponent {
       "assets/jokerly.jpg",
       "2024.06",
       "Learn anything while having fun with flashcards!",
-      "Jokerly is a SRS-based flashcard application that help you learn and memorize anything you want. Create your own decks and flashcards and learn with fun mini-games! The application is developed with Flutter for the web platform, thus letting you use it 'au bureau'🧑‍💻 and on the go📱!",
+      "Jokerly is an SRS-based flashcard application that help you learn and memorize anything you want. Create your own decks and flashcards and learn with fun mini-games! The application is developed with Flutter for the web platform, thus letting you use it 'au bureau'🧑‍💻 and on the go📱!",
       ["Flutter", "Dart", "Docker", "GitHub"],
       [{icon: faGithub, title: "GitHub", url: "https://github.com/nathan68560/Jokerly"}]
     ),

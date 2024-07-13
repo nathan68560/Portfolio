@@ -31,10 +31,10 @@ html {
 
 body {
     margin: 0;
-    background-color: var(--darkvador);
-
-    color: var(--washed-white);
     font-weight: 300;
+    color: var(--washed-white);
+    background-color: var(--darkvador);
+    &:has( aside.active) { overflow: hidden; }
 }
 
 ::-webkit-scrollbar { display: none; }

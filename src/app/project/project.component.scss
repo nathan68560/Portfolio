@@ -58,13 +58,14 @@ article {
                 background-color: var(--washed-white);
             }
         }
-    }
 
-    @media screen and (min-width: 612px) {
-        div { padding: 30px 40px; }
-        h3 { font-size: 24px; }
-        ul { display: flex; }
-        p { display: block; }
+        @media screen and (min-width: 612px) {
+            padding: 30px 40px;
+            
+            h3 { font-size: 24px; }
+            ul { display: flex; }
+            p { display: block; }
+        }
     }
 
     @media screen and (min-width: 1024px) {

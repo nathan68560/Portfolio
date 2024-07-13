@@ -5,7 +5,7 @@ import { ExperienceComponent } from '../experience/experience.component';
 import { ProjectModel } from '../project/project.model';
 import { ProjectComponent } from '../project/project.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { faCircleChevronRight, faGlobe } from '@fortawesome/free-solid-svg-icons';
+import { faCircleChevronRight, faGlobe, faCalendarAlt } from '@fortawesome/free-solid-svg-icons';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 
 @Component({
@@ -28,7 +28,7 @@ export class RightSideComponent {
   projects = [
     new ProjectModel(
       "Portfolio",
-      "assets/portfolio.jpg",
+      "assets/portfolio/portfolio.jpg",
       "2024.07",
       "A website to showcase my personal projects!",
       "Portfolio is my portfolio website where I showcase the different projects I have worked on over the years.",
@@ -40,26 +40,37 @@ export class RightSideComponent {
     ),
     new ProjectModel(
       "Jokerly",
-      "assets/jokerly.jpg",
+      "assets/jokerly/jokerly.jpg",
       "2024.06",
       "Learn anything while having fun with flashcards!",
       "Jokerly is an SRS-based flashcard application that help you learn and memorize anything you want. Create your own decks and flashcards and learn with fun mini-games! The application is developed with Flutter for the web platform, thus letting you use it 'au bureau'🧑‍💻 and on the go📱!",
       ["Flutter", "Dart", "Docker", "GitHub"],
       [{icon: faGithub, title: "GitHub", url: "https://github.com/nathan68560/Jokerly"}],
-      ["assets/deck_creation.gif", "assets/flashcard_creation.gif", "assets/lesson.gif"]
+      ["assets/jokerly/deck_creation.gif", "assets/jokerly/flashcard_creation.gif", "assets/jokerly/lesson.gif"]
     ),
     new ProjectModel(
       "OnePieceTransformer",
-      "assets/opt.jpg",
+      "assets/opt/opt.jpg",
       "2024.05",
       "A local AI model to generate One Piece stories!",
       "OnePieceTransformer is a Transformer model developed in Python and who's purpose is to generate fictional 'One Piece' adventures. My personal goal with this project was to learn more about the inner working of Transformers, and specifically GPTs and Natural Language Processing (NLP) models, as well as Tokenizer that embed data for them.",
       ["Python", "PyTorch", "GitHub"],
       [{icon: faGithub, title: "GitHub", url: "https://github.com/nathan68560/OnePieceTransformer"}]
     ),
+    new ProjectModel(
+      "UselessBot",
+      "assets/uselessBot/uselessbot.jpg",
+      "2021.05",
+      "Have fun games within discord with this bot!",
+      "UselessBot is a small discord bot made in Python. The bot offer 4 functionalities:\n- A TicTacToe game through the ~ !morpion ~ command\n- A naval battle through the ~ !bataille ~ command.\n- A Rock/Paper/Cisor game when prompted with either 'pierre', 'feuille' or 'ciseau'.\n- A ping-ping game, in a certain way ;)",
+      ["Python", "DiscordAPI", "GitHub"],
+      [{icon: faGithub, title: "GitHub", url: "https://github.com/nathan68560/Python-Discord-Bot"}],
+      ["assets/uselessBot/pfc.png","assets/uselessBot/bataille.png","assets/uselessBot/service.png","assets/uselessBot/morpion.png","assets/uselessBot/pingpong.png"],
+    ),
   ];
   currProject: ProjectModel | null = null;
   xicon = faCircleChevronRight;
+  dateIcon = faCalendarAlt;
 
   setCurrProject(project:ProjectModel|null) {
     this.currProject = project;

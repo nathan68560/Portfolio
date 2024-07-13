@@ -111,6 +111,7 @@ aside {
         font-size: 14px;
         line-height: 20px;
         margin: 0 0 10px;
+        white-space: pre-line;
     }
 
     a {
@@ -155,7 +156,7 @@ aside {
 
     .proj-gallery {
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
         gap: 10px;
 
         img {

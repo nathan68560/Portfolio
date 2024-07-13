@@ -31,6 +31,7 @@
             <section class="proj-section" *ngIf="currProject?.description">
                 <h4>About</h4>
                 <p>{{ currProject?.description }}</p>
+                <p class="proj-date"><fa-icon [icon]="dateIcon"></fa-icon> {{ currProject?.date }}</p>
             </section>
             <section class="proj-section" *ngIf="currProject?.tags?.length">
                 <h4>Tags</h4>

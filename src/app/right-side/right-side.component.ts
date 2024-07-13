@@ -45,7 +45,8 @@ export class RightSideComponent {
       "Learn anything while having fun with flashcards!",
       "Jokerly is an SRS-based flashcard application that help you learn and memorize anything you want. Create your own decks and flashcards and learn with fun mini-games! The application is developed with Flutter for the web platform, thus letting you use it 'au bureau'🧑‍💻 and on the go📱!",
       ["Flutter", "Dart", "Docker", "GitHub"],
-      [{icon: faGithub, title: "GitHub", url: "https://github.com/nathan68560/Jokerly"}]
+      [{icon: faGithub, title: "GitHub", url: "https://github.com/nathan68560/Jokerly"}],
+      ["assets/deck_creation.gif", "assets/flashcard_creation.gif", "assets/lesson.gif"]
     ),
     new ProjectModel(
       "OnePieceTransformer",

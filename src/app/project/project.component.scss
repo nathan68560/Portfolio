@@ -9,44 +9,6 @@ article {
     backdrop-filter: blur(4px);
     cursor: pointer;
 
-    @keyframes OnTheDancefloor {
-        0% {
-            box-shadow: -1px -1px 1px 0px var(--purple),
-                1px 1px 1px 0px var(--pink);
-        }
-        20% {
-            box-shadow: -1px -1px 1px 0px var(--pink),
-                1px 1px 1px 0px var(--purple);
-        }
-        40% {
-            box-shadow: -1px -1px 1px 0px var(--dblue),
-                1px 1px 1px 0px var(--teal);
-        }
-        60% {
-            box-shadow: -1px -1px 1px 0px var(--teal),
-                1px 1px 1px 0px var(--dblue);
-        }
-        80% {
-            box-shadow: -1px -1px 1px 0px var(--pink),
-                1px 1px 1px 0px var(--purple);
-        }
-        100% {
-            box-shadow: -1px -1px 1px 0px var(--purple),
-                1px 1px 1px 0px var(--pink);
-        }
-    }
-
-    &:hover {
-        box-shadow: -1px -1px 1px 0px var(--purple),
-            1px 1px 1px 0px var(--pink);
-        animation: OnTheDancefloor 10s linear infinite forwards;
-
-        img {
-            transform: scale(1);
-            filter: blur(2px);
-        }
-    }
-
     img {
         position: absolute;
         width: 100%;
@@ -54,10 +16,6 @@ article {
         z-index: -1;
         object-fit: cover;
         object-position: center;
-        transform: scale(1.05);
-        transform-origin: center;
-        filter: blur(0);
-        transition: 200ms ease-in;
     }
 
     div {
@@ -65,13 +23,13 @@ article {
         inset: 0px;
         background: linear-gradient(transparent, rgb(0, 0, 0, 80%));
         background-blend-mode: multiply;
-        padding: 30px 40px;
+        padding: 20px;
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
 
         h3 {
-            font-size: 24px;
+            font-size: 20px;
             font-weight: 700;
             letter-spacing: 0.25px;
             color: var(--walter-white);
@@ -79,14 +37,16 @@ article {
             margin: 0;
         }
 
+        p { display: none; }
+
         ul {
-            list-style: none;
-            padding: 0px;
-            margin: 0px;
-            display: flex;
+            display: none;
             flex-wrap: wrap;
             justify-content: flex-start;
             align-items: baseline;
+            list-style: none;
+            padding: 0px;
+            margin: 0px;
             gap: 10px;
 
             li {
@@ -98,5 +58,59 @@ article {
                 background-color: var(--washed-white);
             }
         }
+    }
+
+    @media screen and (min-width: 612px) {
+        div { padding: 30px 40px; }
+        h3 { font-size: 24px; }
+        ul { display: flex; }
+        p { display: block; }
+    }
+
+    @media screen and (min-width: 1024px) {
+        img {
+            transform: scale(1.05);
+            transform-origin: center;
+            filter: blur(0);
+            transition: 200ms ease-in;
+        }
+
+        @keyframes OnTheDancefloor {
+            0% {
+                box-shadow: -1px -1px 1px 0px var(--purple),
+                    1px 1px 1px 0px var(--pink);
+            }
+            20% {
+                box-shadow: -1px -1px 1px 0px var(--pink),
+                    1px 1px 1px 0px var(--purple);
+            }
+            40% {
+                box-shadow: -1px -1px 1px 0px var(--dblue),
+                    1px 1px 1px 0px var(--teal);
+            }
+            60% {
+                box-shadow: -1px -1px 1px 0px var(--teal),
+                    1px 1px 1px 0px var(--dblue);
+            }
+            80% {
+                box-shadow: -1px -1px 1px 0px var(--pink),
+                    1px 1px 1px 0px var(--purple);
+            }
+            100% {
+                box-shadow: -1px -1px 1px 0px var(--purple),
+                    1px 1px 1px 0px var(--pink);
+            }
+        }
+
+        &:hover {
+            box-shadow: -1px -1px 1px 0px var(--purple),
+                1px 1px 1px 0px var(--pink);
+            animation: OnTheDancefloor 10s linear infinite forwards;
+
+            img {
+                transform: scale(1);
+                filter: blur(2px);
+            }
+        }        
     }
 }

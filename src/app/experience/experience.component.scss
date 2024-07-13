@@ -1,55 +1,11 @@
 article {
     display: grid;
-    grid-template-columns: 130px 1fr;
+    grid-template-columns: 1fr;
     gap: 20px;
     position: relative;
     margin: 14px -20px 34px;
     padding: 16px 20px;
     cursor: default;
-
-    @keyframes IWannaDance {
-        0% {
-            box-shadow: -1px -1px 2px -1px var(--purple),
-                1px 1px 2px -1px var(--pink);
-        }
-        20% {
-            box-shadow: -1px -1px 2px -1px var(--pink),
-                1px 1px 2px -1px var(--purple);
-        }
-        40% {
-            box-shadow: -1px -1px 2px -1px var(--dblue),
-                1px 1px 2px -1px var(--teal);
-        }
-        60% {
-            box-shadow: -1px -1px 2px -1px var(--teal),
-                1px 1px 2px -1px var(--dblue);
-        }
-        80% {
-            box-shadow: -1px -1px 2px -1px var(--pink),
-                1px 1px 2px -1px var(--purple);
-        }
-        100% {
-            box-shadow: -1px -1px 2px -1px var(--purple),
-                1px 1px 2px -1px var(--pink);
-        }
-    }
-
-    &::before {
-        content: '';
-        position: absolute;
-        inset: 0px;
-        z-index: -1;
-        opacity: 0;
-        background-color: var(--grid-color);
-        border-radius: 10px;
-        backdrop-filter: blur(4px);
-        box-shadow: -1px -1px 2px -1px var(--purple),
-            1px 1px 2px -1px var(--pink);
-        transition: opacity ease-in 200ms;
-        animation: IWannaDance 10s linear infinite forwards;
-    }
-
-    &:hover::before { opacity: 1; }
 
     .period {
         color: var(--washed-white);
@@ -95,5 +51,55 @@ article {
             font-weight: 700;
             cursor: default;
         }
+    }
+
+    @media screen and (min-width: 768px) {
+        grid-template-columns: 130px 1fr;
+    }
+
+    @media screen and (min-width: 1024px) {
+        @keyframes IWannaDance {
+            0% {
+                box-shadow: -1px -1px 2px -1px var(--purple),
+                    1px 1px 2px -1px var(--pink);
+            }
+            20% {
+                box-shadow: -1px -1px 2px -1px var(--pink),
+                    1px 1px 2px -1px var(--purple);
+            }
+            40% {
+                box-shadow: -1px -1px 2px -1px var(--dblue),
+                    1px 1px 2px -1px var(--teal);
+            }
+            60% {
+                box-shadow: -1px -1px 2px -1px var(--teal),
+                    1px 1px 2px -1px var(--dblue);
+            }
+            80% {
+                box-shadow: -1px -1px 2px -1px var(--pink),
+                    1px 1px 2px -1px var(--purple);
+            }
+            100% {
+                box-shadow: -1px -1px 2px -1px var(--purple),
+                    1px 1px 2px -1px var(--pink);
+            }
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            inset: 0px;
+            z-index: -1;
+            opacity: 0;
+            background-color: var(--grid-color);
+            border-radius: 10px;
+            backdrop-filter: blur(4px);
+            box-shadow: -1px -1px 2px -1px var(--purple),
+                1px 1px 2px -1px var(--pink);
+            transition: opacity ease-in 200ms;
+            animation: IWannaDance 10s linear infinite forwards;
+        }
+
+        &:hover::before { opacity: 1; }
     }
 }

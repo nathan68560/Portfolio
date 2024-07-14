@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+	<title>Genetical Neural Network</title>
+	<style>
+		body {
+			-webkit-touch-callout: none;
+			-webkit-user-select: none;
+			-khtml-user-select: none;
+			-moz-user-select: none;
+			-ms-user-select: none;
+			user-select: none;
+			height: auto;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+		.canvas-app-canvas {
+			width: 100%;
+			max-width: 160vh;
+			height: auto;
+			max-height: 90vh;
+			cursor: pointer;
+		}
+
+		.canvas-app-progress {
+			position: absolute;
+			background-color: rgb(245, 245, 245);
+			height: 2%;
+			
+			width: 80%;
+			bottom: 0px;
+		}
+
+		.canvas-app-progress-bar {
+			font-size: 12px;
+			height: 4%;
+			color: rgb(255, 255, 255);
+			background-color: rgb(30, 100, 234);
+			text-align: center;
+			line-height: 20px;
+		}
+	</style>
+</head>
+
+<body>
+	<canvas id="canvas" class="canvas-app-canvas" tabindex="1" width="1280px" height="720px"></canvas>
+	<script type='text/javascript' src="dmloader.js"></script>
+	<script type='text/javascript' src="Genetical Neural Network.js" async onload=""></script>
+
+	<script type='text/javascript'>
+		var extra_params = {
+			archive_location_filter: function( path ) {
+				return ("archive" + path + "");
+			},
+			
+			splash_image: "splash_image.png",
+			custom_heap_size: 268435456
+		}
+
+		Module.runApp("canvas", extra_params);
+	</script>
+</body>
+</html>

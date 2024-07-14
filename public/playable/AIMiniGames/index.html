@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Mini Games Test</title>
+    <script src="TemplateData/UnityProgress.js"></script>
+    <script src="Build/UnityLoader.js"></script>
+    <script>var unityInstance = UnityLoader.instantiate("unityContainer", "Build/AIMiniGames.json", {onProgress: UnityProgress});</script>
+    <style>
+      body {
+        margin: 0px;
+        background-color: #303030;
+      }
+      .webgl-content {
+        margin: auto;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      #unityContainer {
+        width: 1280px;
+        height: 720px;
+        background: #303030!important;
+      }
+    </style>
+  </head>
+  <body>
+      <!-- Live Unity playable -->
+      <div class="webgl-content">
+        <div id="unityContainer"></div>
+        <button onclick="unityInstance.SetFullscreen(true)">Fullscreen</button>
+      </div>
+  </body>
+</html>

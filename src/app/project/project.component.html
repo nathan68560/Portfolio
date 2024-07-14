@@ -1,5 +1,5 @@
 <article [title]="project.name">
-    <img *ngIf="project.thumbnailSrc" [src]="project.thumbnailSrc" alt="Thumbnail for {{project.name}}">
+    <img *ngIf="project.thumbnailSrc" [ngSrc]="project.thumbnailSrc" alt="Thumbnail for {{project.name}}" width="540" height="360">
     <div>
         <h3>{{ project.name }}</h3>
         <p>{{ project.excerpt }}</p>

@@ -1,17 +1,17 @@
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { CommonModule, NgOptimizedImage } from '@angular/common';
 import { ExperienceModel } from '../experience/experience.model';
 import { ExperienceComponent } from '../experience/experience.component';
 import { ProjectModel } from '../project/project.model';
 import { ProjectComponent } from '../project/project.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { faCircleChevronRight, faGlobe, faCalendarAlt } from '@fortawesome/free-solid-svg-icons';
+import { faCircleChevronRight, faGlobe, faCalendarAlt, faNewspaper, faFireFlameCurved } from '@fortawesome/free-solid-svg-icons';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 
 @Component({
   selector: 'right-side',
   standalone: true,
-  imports: [CommonModule, ExperienceComponent, ProjectComponent, FontAwesomeModule],
+  imports: [CommonModule, ExperienceComponent, ProjectComponent, FontAwesomeModule, NgOptimizedImage],
   templateUrl: './right-side.component.html',
   styleUrl: './right-side.component.scss'
 })
@@ -28,7 +28,7 @@ export class RightSideComponent {
   projects = [
     new ProjectModel(
       "Portfolio",
-      "assets/portfolio/portfolio.jpg",
+      "assets/portfolio/portfolio.gif",
       "2024.07",
       "A website to showcase my personal projects!",
       "Portfolio is my portfolio website where I showcase the different projects I have worked on over the years.",
@@ -50,7 +50,7 @@ export class RightSideComponent {
     ),
     new ProjectModel(
       "OnePieceTransformer",
-      "assets/opt/opt.jpg",
+      "assets/onePieceTransformer/onepiecetransformer.gif",
       "2024.05",
       "A local AI model to generate One Piece stories!",
       "OnePieceTransformer is a Transformer model developed in Python and who's purpose is to generate fictional 'One Piece' adventures. My personal goal with this project was to learn more about the inner working of Transformers, and specifically GPTs and Natural Language Processing (NLP) models, as well as Tokenizer that embed data for them.",
@@ -67,6 +67,42 @@ export class RightSideComponent {
       [{icon: faGithub, title: "GitHub", url: "https://github.com/nathan68560/Python-Discord-Bot"}],
       ["assets/uselessBot/pfc.png","assets/uselessBot/bataille.png","assets/uselessBot/service.png","assets/uselessBot/morpion.png","assets/uselessBot/pingpong.png"],
     ),
+    new ProjectModel(
+      "AIMiniGamesTest",
+      "assets/aiMiniGames/aiminigamestest.gif",
+      "2020.04",
+      "Experimentation with Neural Networks and AI!",
+      "AIMiniGamesTest is a Unity3D project which consist of two different mini game. The first, D_AIG (Draw, AI Guess), is a game where you have 3 different symbols (cross, circle and triangle) that you can draw on a 32x32 pixels board. The AI will then try to guess which it is. The second one, TAICTOE, is a classic tic tac toe game, where you play the cross and the AI play the circle.",
+      ["C#", "Unity3D", "GitHub"],
+      [
+        {icon: faGithub, title: "GitHub", url: "https://github.com/nathan68560/AIMiniGamesTest"},
+        {icon: faFireFlameCurved, title: "Check it out", url: "https://nathan68560.github.io/Portfolio/playable/AIMiniGames"},
+      ]
+    ),
+    new ProjectModel(
+      "GeneticalNeuralNetwork",
+      "assets/geneticalNeuralNetwork/gnn.gif",
+      "2018.08",
+      "Watch Ai cars learn to drive through evolution!",
+      "GeneticalNeuralNetwork is a Defold project showcasing how to implement a simple Genetical Neural Network, which simulate the process of natural selection to improve the model over multiple generations. To illustrate this the project spawn 10 cars each generation in a racetrack, the cars need to reach the finish line the quickest without crashing into walls.",
+      ["Lua", "Defold", "GitHub"],
+      [
+        {icon: faNewspaper, title: "Forum", url: "https://forum.defold.com/t/articifial-neural-network-ai"},
+        {icon: faGithub, title: "GitHub", url: "https://github.com/nathan68560/Genetical_Neural_Network"},
+        {icon: faFireFlameCurved, title: "Check it out", url: "https://nathan68560.github.io/Portfolio/playable/GeneticalNeuralNetwork"},
+      ]
+    ),
+    new ProjectModel(
+      "ScubaDivers",
+      "assets/scubaDivers/scubadivers.gif",
+      "2018",
+      "Take a plunge into the unknown in Scuba Divers!",
+      "Scuba Divers is an 'endless-runner' type of smartphone game made with Defold that puts you in the fins of a determined diver on a mission to reach the ocean's deepest trench. Collect coins and lost treasures as you dive down, but watch out for jellyfish and sharks! Catch precious oxygen bubbles to keep your tank full and the adventure going. Use your collected coins to upgrade your diving gear and help you reach even greater depths!",
+      ["Lua", "Defold"],
+      [
+        {icon: faFireFlameCurved, title: "Check it out", url: "https://nathan68560.github.io/Portfolio/playable/ScubaDivers"}        
+      ]
+    )
   ];
   currProject: ProjectModel | null = null;
   xicon = faCircleChevronRight;

@@ -26,7 +26,7 @@
             <section class="proj-section">
                 <h3>{{ currProject?.name }}</h3>
                 <p>{{ currProject?.excerpt }}</p>
-                <img *ngIf="currProject?.thumbnailSrc" [src]="currProject?.thumbnailSrc" alt="Thumbnail for {{currProject?.name}}">
+                <img *ngIf="currProject?.thumbnailSrc" [ngSrc]="currProject?.thumbnailSrc!" alt="Thumbnail for {{currProject?.name}}" width="540" height="360">
             </section>
             <section class="proj-section" *ngIf="currProject?.description">
                 <h4>About</h4>
@@ -40,14 +40,14 @@
                 </ul>
             </section>
             <section class="proj-section" *ngFor="let link of currProject?.links">
-                <h4><fa-icon [icon]="link.icon"></fa-icon> {{ link.title }}</h4>
+                <h4><fa-icon [icon]="link.icon"></fa-icon>&ensp;{{ link.title }}</h4>
                 <a [href]="link.url" title="Open {{currProject?.name}}'s {{link.title}} link in a new tab" target="_blank" referrerpolicy="noreferrer">{{ link.url }}</a>
             </section>
             <section class="proj-section" *ngIf="currProject?.imagesSrc?.length">
                 <h4>Gallery</h4>
                 <div class="proj-gallery">
                     <a *ngFor="let src of currProject?.imagesSrc" [href]="src" target="_blank" title="Open image in a new tab">
-                        <img [src]="src" alt="Image for the {{ currProject?.name }} project">
+                        <img [src]="src" alt="Image for the {{ currProject?.name }} project" loading="lazy" decoding="async">
                     </a>
                 </div>
             </section>

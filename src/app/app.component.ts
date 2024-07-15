@@ -14,30 +14,36 @@ export class AppComponent {
     constructor(private elementRef: ElementRef) {}
 
     @HostListener('window:scroll', ['$event'])
-    onScroll() { this.updateActiveLink(); }
+    onScroll() { this.onScrollUpdateNavLink(); }
 
-    updateActiveLink() {
+    /**
+     * Update the page navigation links to match the current section.
+     * 
+     * Once a section's end is past 1/3 of the top of the screen, the next section
+     * is considered active and so the corresponding navigation link is set active.
+     */
+    onScrollUpdateNavLink() {
         const sections = this.elementRef.nativeElement.querySelectorAll('.main-section');
 
         for(let i=0; i<sections.length; i++) {
-            const section = sections[i];
-            const sectionTop = section.getBoundingClientRect().top;
-            const sectionHeight = section.offsetHeight;
-            const sectionBottom = sectionTop + sectionHeight;
+            const sectionEnd = sections[i].getBoundingClientRect().bottom;
 
-            if (sectionTop >= 0 && sectionBottom <= window.innerHeight + window.scrollY) {
-                const activeLink = this.elementRef.nativeElement.querySelectorAll('#nav-links a')[i];
-                this.removeActiveClass();
-                activeLink.classList.add('active');
+            if (sectionEnd >= (window.innerHeight/3)) {
+                this.setActiveLink(i);
                 break;
             }
         };
     }
 
-    removeActiveClass() {
-        const links = this.elementRef.nativeElement.querySelectorAll('#nav-links a.active');
-        for (const link of links) {
-            link.classList.remove('active');
+    /**
+     * Iterate through every page navigation links and toggle the 'active' class
+     * if their index is equal to the given activeLinkIndex's value.
+     * @param activeLinkIndex The index of the link to set active.
+     */
+    setActiveLink(activeLinkIndex: number) {
+        const links = this.elementRef.nativeElement.querySelectorAll('#nav-links a');
+        for (let i=0; i<links.length; i++) {
+            links[i].classList.toggle('active', i == activeLinkIndex);
         }
     }
 }

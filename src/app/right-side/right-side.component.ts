@@ -76,7 +76,7 @@ export class RightSideComponent {
       ["C#", "Unity3D", "GitHub"],
       [
         {icon: faGithub, title: "GitHub", url: "https://github.com/nathan68560/AIMiniGamesTest"},
-        {icon: faFireFlameCurved, title: "Check it out", url: "https://nathan68560.github.io/Portfolio/playable/AIMiniGames"},
+        {icon: faFireFlameCurved, title: "Check it out", url: "https://nathan68560.github.io/Portfolio/archived_builds/AIMiniGames"},
       ]
     ),
     new ProjectModel(
@@ -89,7 +89,7 @@ export class RightSideComponent {
       [
         {icon: faNewspaper, title: "Forum", url: "https://forum.defold.com/t/articifial-neural-network-ai"},
         {icon: faGithub, title: "GitHub", url: "https://github.com/nathan68560/Genetical_Neural_Network"},
-        {icon: faFireFlameCurved, title: "Check it out", url: "https://nathan68560.github.io/Portfolio/playable/GeneticalNeuralNetwork"},
+        {icon: faFireFlameCurved, title: "Check it out", url: "https://nathan68560.github.io/Portfolio/archived_builds/GeneticalNeuralNetwork"},
       ]
     ),
     new ProjectModel(
@@ -100,7 +100,7 @@ export class RightSideComponent {
       "Scuba Divers is an 'endless-runner' type of smartphone game made with Defold that puts you in the fins of a determined diver on a mission to reach the ocean's deepest trench. Collect coins and lost treasures as you dive down, but watch out for jellyfish and sharks! Catch precious oxygen bubbles to keep your tank full and the adventure going. Use your collected coins to upgrade your diving gear and help you reach even greater depths!",
       ["Lua", "Defold"],
       [
-        {icon: faFireFlameCurved, title: "Check it out", url: "https://nathan68560.github.io/Portfolio/playable/ScubaDivers"}        
+        {icon: faFireFlameCurved, title: "Check it out", url: "https://nathan68560.github.io/Portfolio/archived_builds/ScubaDivers"}        
       ]
     )
   ];

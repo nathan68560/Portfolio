@@ -1,6 +1,7 @@
 article {
     position: relative;
     width: 100%;
+    height: auto;
     aspect-ratio: 3/2;
     border-radius: 10px;
     margin: 20px 0 50px;
@@ -8,6 +9,8 @@ article {
     background: var(--grid-color);
     backdrop-filter: blur(4px);
     cursor: pointer;
+
+    &:last-of-type { margin-bottom: 0; }
 
     img {
         position: absolute;
@@ -24,14 +27,14 @@ article {
         inset: 0px;
         background: linear-gradient(transparent, rgb(0, 0, 0, 80%));
         background-blend-mode: multiply;
-        padding: 20px;
+        padding: 14px;
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
 
         h3 {
-            font-size: 20px;
-            font-weight: 700;
+            font-size: 16px;
+            font-weight: 600;
             letter-spacing: 0.25px;
             color: var(--walter-white);
             line-height: 20px;
@@ -59,8 +62,21 @@ article {
                 background-color: var(--washed-white);
             }
         }
+    }
 
-        @media screen and (min-width: 612px) {
+    @media screen and (min-width: 425px) {
+        div {
+            padding: 20px;
+            
+            h3 {
+                font-size: 20px;
+                font-weight: 700;
+            }
+        }
+    }
+
+    @media screen and (min-width: 612px) {
+        div {
             padding: 30px 40px;
             
             h3 { font-size: 24px; }

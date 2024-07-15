@@ -1,6 +1,6 @@
 .main-section {
     position: relative;
-    margin-top: 100px;
+    margin-top: 60px;
 
     h2 {
         margin: 0 0 12px;
@@ -10,14 +10,24 @@
         text-transform: uppercase;
     }
 
-    .anchor {
-        position: absolute;
-        top: -112px;
+    p { font-size: 14px; }
+
+    @media screen and (min-width: 425px) {
+        p { font-size: 16px; }
+    }
+
+    @media screen and (min-width: 612px) {
+        margin-top: 100px;
     }
 
     @media screen and (min-width: 1024px) {
         &:first-of-type {
             margin-top: 22px;
+        }
+
+        .anchor {
+            position: absolute;
+            top: -112px;
         }
     }
 }
@@ -43,7 +53,7 @@ aside {
         top: 0;
         right: 0;
         bottom: 0;
-        padding: 30px 40px 0;
+        padding: 30px 30px 0;
         width: 100vw;
         background: var(--darkvador);
         transform: translateX(100%);
@@ -85,6 +95,7 @@ aside {
     @media screen and (min-width: 612px) {
         .project-details {
             width: min(600px, 80vw);
+            padding: 30px 40px 0;
         }        
     }
 }
@@ -93,7 +104,7 @@ aside {
     &:not(:first-of-type) { margin-top: 40px; }
 
     h3 {
-        font-size: 26px;
+        font-size: 22px;
         line-height: 20px;
         color: var(--walter-white);
         margin-bottom: 10px;
@@ -101,15 +112,15 @@ aside {
     }
 
     h4 {
-        font-size: 20px;
+        font-size: 18px;
         font-weight: 500;
         color: var(--mid-white);
         margin: 10px 0;
     }
 
     p {
-        font-size: 14px;
-        line-height: 20px;
+        font-size: 12px;
+        line-height: 18px;
         margin: 0 0 10px;
         white-space: pre-line;
     }
@@ -120,6 +131,10 @@ aside {
         font-size: 12px;
         font-weight: 500;
         letter-spacing: -0.025em;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: inline-block;
+        max-width: 100%;
 
         &:hover {
             text-decoration: underline;
@@ -140,7 +155,7 @@ aside {
             color: var(--darkvador);
             padding: 5px 10px;
             border-radius: 20px;
-            font-size: 12px;
+            font-size: 10px;
             font-weight: 700;
             background-color: var(--washed-white);
         }
@@ -148,6 +163,7 @@ aside {
 
     img {
         width: 100%;
+        height: auto;
         aspect-ratio: 3/2;
         object-fit: cover;
         object-position: center;
@@ -162,10 +178,18 @@ aside {
 
         img {
             width: 100%;
+            height: auto;
             aspect-ratio: unset;
             object-fit: contain;
             border-radius: 8px;
             max-height: 350px;
         }
+    }
+
+    @media screen and (min-width: 425px) {
+        h3 { font-size: 26px; }
+        h4 { font-size: 20px; }
+        p { font-size: 14px; line-height: 20px; }
+        ul>li { font-size: 12px; }
     }
 }

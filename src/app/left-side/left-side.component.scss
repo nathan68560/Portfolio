@@ -2,21 +2,23 @@ header {
     min-height: fit-content;
 
     h1 {
-        font-size: 46px;
+        font-size: 40px;
+        line-height: 44px;
         font-weight: 700;
-        margin: 0 0 5px;
+        margin: 0 0 15px;
         letter-spacing: -0.015em;
         color: var(--walter-white);
     }
     
     h2 {
-        font-size: 22px;
+        font-size: 20px;
         font-weight: 500;
         margin: 0 0 20px;
         color: var(--mid-white);
     }
 
     p {
+        font-size: 14px;
         margin: 0 0 30px;
     }
 
@@ -89,10 +91,23 @@ header {
         }
     }
 
+    @media screen and (min-width: 425px) {
+        h1 {
+            font-size: 46px;
+            line-height: normal;
+        }
+        h2 { font-size: 22px; }
+        p { font-size: 16px; }
+    }
+    
     @media screen and (min-width: 1024px) {
         position: fixed;
         height: round(70%, 92px);
         width: min(500px, 35%);
+
+        h1 {
+            margin-bottom: 10px;
+        }
 
         #nav-links {
             display: flex;

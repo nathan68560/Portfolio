@@ -1,0 +1,3 @@
+# Archived builds are builds from other old projects that have nothing to do with this one
+# and are only included since I don't have any source code repository or other places to host them
+public/archived_builds/* linguist-vendored # Set every files in here as vendors and ignore them from GitHub language stats

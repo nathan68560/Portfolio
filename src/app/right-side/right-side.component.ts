@@ -6,7 +6,7 @@ import { ProjectModel } from '../project/project.model';
 import { ProjectComponent } from '../project/project.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faCircleChevronRight, faGlobe, faCalendarAlt, faNewspaper, faFireFlameCurved } from '@fortawesome/free-solid-svg-icons';
-import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faGithub, faYoutube } from '@fortawesome/free-brands-svg-icons';
 
 @Component({
   selector: 'right-side',
@@ -58,6 +58,15 @@ export class RightSideComponent {
       [{icon: faGithub, title: "GitHub", url: "https://github.com/nathan68560/OnePieceTransformer"}]
     ),
     new ProjectModel(
+      "SpiriMon VR",
+      "",
+      "2022.08",
+      "",
+      "",
+      ["C#", "Unity3D", "VR"],
+
+    ),
+    new ProjectModel(
       "UselessBot",
       "assets/uselessBot/uselessbot.jpg",
       "2021.05",
@@ -66,6 +75,16 @@ export class RightSideComponent {
       ["Python", "DiscordAPI", "GitHub"],
       [{icon: faGithub, title: "GitHub", url: "https://github.com/nathan68560/Python-Discord-Bot"}],
       ["assets/uselessBot/pfc.png","assets/uselessBot/bataille.png","assets/uselessBot/service.png","assets/uselessBot/morpion.png","assets/uselessBot/pingpong.png"],
+    ),
+    new ProjectModel(
+      "VR - EscapeTheCastle",
+      "assets/escapeTheCastle/escapethecastle.gif",
+      "2021.04",
+      "Sharpen your wits if you want to escape!",
+      "VR - EscapeTheCastle is a single-player virtual reality escape-game I built with Unity and C#. Explore a captivating medieval castle filled with intricate puzzles and hidden secrets. Decipher cryptic clues and overcome challenges at your own pace to unlock the mysteries and escape the castle's grasp.",
+      ["C#", "Unity3D", "VR"],
+      [{icon: faYoutube, title: "YouTube", url: "https://www.youtube.com/watch?v=2Cpl_1N3Dvc"}]
+
     ),
     new ProjectModel(
       "AIMiniGamesTest",

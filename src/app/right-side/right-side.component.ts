@@ -102,6 +102,17 @@ export class RightSideComponent {
       [
         {icon: faFireFlameCurved, title: "Check it out", url: "https://nathan68560.github.io/Portfolio/archived_builds/ScubaDivers"}        
       ]
+    ),
+    new ProjectModel(
+      "The Mysterious Power's Book",
+      "assets/theMysteriousPowersBook/tmpb.gif",
+      "2017",
+      "Ready to find out what's about this book? ",
+      "The Mysterious Power's Book is a 2-chapter, 16-level cooperative story-driven puzzle game I developed for Highschool friends with Defold. Player uses totally different mechanics in both chapters to progress through a captivating, and surprising, narrative. Besides the main-story, the game also offers two mini-games with unique mechanics, as-well as two secret easter-egg levels.",
+      ["Lua", "Defold"],
+      [
+        {icon: faFireFlameCurved, title: "Check it out", url: "https://nathan68560.github.io/Portfolio/archived_builds/TheMysteriousPowersBook"}    
+      ]
     )
   ];
   currProject: ProjectModel | null = null;
